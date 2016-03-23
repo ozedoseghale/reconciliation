@@ -4,7 +4,6 @@
 var fs = require("fs"),
     path = require("path");
 
-var async = require('async');
 var sys = require('sys')
 var exec = require('child_process').exec;
 
