@@ -1,9 +1,6 @@
 #!/usr/bin/env node
 
 
-var lame = require("lame");
-var wav = require("wav");
-var ogg = require("ogg");
 var fs = require("fs"),
     path = require("path");
 
