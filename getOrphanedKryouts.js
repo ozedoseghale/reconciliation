@@ -42,7 +42,7 @@ function processAudio(file, callback){
 		}
         	var birthday = fs.statSync(file).mtime.getFullYear()+("0" + (fs.statSync(file).mtime.getMonth() + 1)).slice(-2)+("0" + (fs.statSync(file).mtime.getDate())).slice(-2);
         	var birthtime = ("0" + (fs.statSync(file).mtime.getHours() )).slice(-2)+("0" + (fs.statSync(file).mtime.getMinutes() )).slice(-2)+("0" + (fs.statSync(file).mtime.getSeconds())).slice(-2);
-        	var baseFileName = "./comments/cmnt-"+file.slice(27, 42)+birthday+birthtime;
+        	var baseFileName = "./comments/cmnt-"+file.split("-")[1]+birthday+birthtime;
         	var oldMp3File = file.slice(0,-4)+".mp3";
         	var oldOggFile = file.slice(0,-4)+".ogg";
                 try{
