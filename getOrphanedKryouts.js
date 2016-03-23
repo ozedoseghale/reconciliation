@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+var async = require('async');
 
 var fs = require("fs"),
     path = require("path");
