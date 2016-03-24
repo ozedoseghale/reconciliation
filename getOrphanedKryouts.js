@@ -10,6 +10,7 @@ var exec = require('child_process').exec;
 
 var p = "/tmp/kroudly/comments/"
 var numFiles =0;
+var pos = 0;
 var dFiles = [];
 fs.readdir(p, function (err, files) {
     	if (err) {
@@ -73,7 +74,7 @@ function processAudio(file, callback){
 							console.log(postUrl);
 							const doCurl = exec(postUrl);
 							doCurl.on('close', function(code, signal){
-								console.log("doCurl process terminated due to receipt of signal " + signal);
+								console.log((pos++)+" doCurl process terminated due to receipt of signal " + signal);
 								callback();
 							});
 						});
